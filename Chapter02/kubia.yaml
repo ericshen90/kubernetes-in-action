@@ -15,8 +15,12 @@ spec:
     spec:
       containers:
       - name: kubia
-        image: luksa/kubia:latest
+        image: ericshen90/kubia:latest
         ports:
         - containerPort: 8080
           protocol: TCP
       
+
+
+
+

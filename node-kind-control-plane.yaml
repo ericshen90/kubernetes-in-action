@@ -1,0 +1,127 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2022-07-12T09:43:32Z"
+  labels:
+    beta.kubernetes.io/arch: arm64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: arm64
+    kubernetes.io/hostname: kind-control-plane
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ""
+    node.kubernetes.io/exclude-from-external-load-balancers: ""
+  name: kind-control-plane
+  resourceVersion: "16348"
+  uid: 2af2666c-8415-411f-b6b2-53cef7dc0b2d
+spec:
+  podCIDR: 10.244.0.0/24
+  podCIDRs:
+  - 10.244.0.0/24
+  providerID: kind://docker/kind/kind-control-plane
+  taints:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/control-plane
+status:
+  addresses:
+  - address: 172.18.0.4
+    type: InternalIP
+  - address: kind-control-plane
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: 65792556Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8142120Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 65792556Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8142120Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2022-07-13T02:36:53Z"
+    lastTransitionTime: "2022-07-12T09:43:29Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2022-07-13T02:36:53Z"
+    lastTransitionTime: "2022-07-12T09:43:29Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2022-07-13T02:36:53Z"
+    lastTransitionTime: "2022-07-12T09:43:29Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2022-07-13T02:36:53Z"
+    lastTransitionTime: "2022-07-12T09:43:55Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - docker.io/library/import-2022-05-19@sha256:3a18911a62722dd7a502e620f8e219e8fd0e916e5eab4c8d6e9c2ddd833f9a81
+    - k8s.gcr.io/kube-proxy:v1.24.0
+    sizeBytes: 108499308
+  - names:
+    - k8s.gcr.io/etcd:3.5.3-0
+    sizeBytes: 81114891
+  - names:
+    - docker.io/library/import-2022-05-19@sha256:9afc766bc91f62fb97a049b08816b55785a7fd7c0d6f85c2c24dd6b8309138aa
+    - k8s.gcr.io/kube-apiserver:v1.24.0
+    sizeBytes: 75532770
+  - names:
+    - docker.io/library/import-2022-05-19@sha256:339271590b37c0e843ebdf8ccaaa8007939e71c207c1c670b570cb97d9175bab
+    - k8s.gcr.io/kube-controller-manager:v1.24.0
+    sizeBytes: 63801460
+  - names:
+    - docker.io/library/import-2022-05-19@sha256:3a704da72e9d483ec63ba822e725b4df184093e91ddf873a6b8c8335aa10b5ca
+    - k8s.gcr.io/kube-scheduler:v1.24.0
+    sizeBytes: 51349620
+  - names:
+    - docker.io/kindest/kindnetd:v20220510-4929dd75
+    sizeBytes: 43838767
+  - names:
+    - docker.io/kindest/local-path-provisioner:v0.0.22-kind.0
+    sizeBytes: 15578330
+  - names:
+    - k8s.gcr.io/coredns/coredns:v1.8.6
+    sizeBytes: 12317707
+  - names:
+    - docker.io/kindest/local-path-helper:v20220512-507ff70b
+    sizeBytes: 2749878
+  - names:
+    - k8s.gcr.io/pause:3.6
+    sizeBytes: 253553
+  nodeInfo:
+    architecture: arm64
+    bootID: 2b79ddd6-445d-406e-98ee-a115822d6a92
+    containerRuntimeVersion: containerd://1.6.4
+    kernelVersion: 5.10.104-linuxkit
+    kubeProxyVersion: v1.24.0
+    kubeletVersion: v1.24.0
+    machineID: 3948bb257dfd495e9eb4a88e5631e5f6
+    operatingSystem: linux
+    osImage: Ubuntu 21.10
+    systemUUID: 3948bb257dfd495e9eb4a88e5631e5f6

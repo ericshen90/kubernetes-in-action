@@ -4,11 +4,10 @@ metadata:
   name: kubia-liveness
 spec:
   containers:
-  - image: luksa/kubia-unhealthy
+  - image: ericshen90/kubia-unhealthy
     name: kubia
     livenessProbe:
       httpGet:
         path: /
         port: 8080
       initialDelaySeconds: 15
-

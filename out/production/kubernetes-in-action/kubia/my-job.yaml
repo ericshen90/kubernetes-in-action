@@ -1,9 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: time-limited-batch-job
+  name: my-job
 spec:
-  activeDeadlineSeconds: 30
   template:
     metadata:
       labels:
@@ -13,3 +12,5 @@ spec:
       containers:
       - name: main
         image: luksa/batch-job
+
+

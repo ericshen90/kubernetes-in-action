@@ -5,7 +5,7 @@ metadata:
   namespace: custom-namespace
 spec:
   containers:
-  - image: luksa/kubia
+  - image: ericshen90/kubia
     name: kubia
     ports:
     - containerPort: 8080
