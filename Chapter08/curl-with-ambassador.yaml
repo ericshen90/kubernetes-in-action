@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: main
-    image: tutum/curl
+    image: ellerbrock/alpine-bash-curl-ssl
     command: ["sleep", "9999999"]
   - name: ambassador
-    image: luksa/kubectl-proxy:1.6.2
+    image: ericshen90/kubectl-proxy:1.24.0
