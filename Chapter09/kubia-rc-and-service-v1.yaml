@@ -11,7 +11,7 @@ spec:
         app: kubia
     spec:
       containers:
-      - image: luksa/kubia:v1
+      - image: ericshen90/kubia:v1
         name: nodejs
 ---
 apiVersion: v1
@@ -25,3 +25,4 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
+    nodePort: 30000
